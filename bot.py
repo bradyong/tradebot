@@ -27,7 +27,7 @@ WEBHOOK_PASSPHRASE = os.getenv("WEBHOOK_PASSPHRASE", "1234")
 BINANCE_API_KEY = os.getenv("BINANCE_API_KEY", "")
 BINANCE_API_SECRET = os.getenv("BINANCE_API_SECRET", "")
 
-BASE_URL = os.getenv("BINANCE_FAPI_BASE_URL", "https://fapi.binance.com")
+BASE_URL = os.getenv("BINANCE_FAPI_BASE_URL", "https://fapi1.binance.com")
 
 DEFAULT_SYMBOL = os.getenv("DEFAULT_SYMBOL", "BTCUSDT")
 DEFAULT_LEVERAGE = int(os.getenv("DEFAULT_LEVERAGE", "10"))
@@ -533,4 +533,5 @@ if __name__ == "__main__":
     if not BINANCE_API_KEY or not BINANCE_API_SECRET:
         print("WARNING: BINANCE_API_KEY / BINANCE_API_SECRET not set.")
     print(f"Running on http://{APP_HOST}:{APP_PORT}")
+
     app.run(host=APP_HOST, port=APP_PORT)
